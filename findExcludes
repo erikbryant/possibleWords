@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Find combinations of letters that do not appear in the dictionary
+
+for a1 in {a..z} ; do
+  for a2 in {a..z} ; do
+    egrep --quiet "$a1$a2" merged.dict || echo "$a1$a2"
+  done
+done > exclude.2
+
+for a1 in {a..z} ; do
+  for a2 in {a..z} ; do
+    for a3 in {a..z} ; do
+      egrep --quiet "$a1$a2$a3" merged.dict || echo "$a1$a2$a3"
+    done
+  done
+done > exclude.3
+
