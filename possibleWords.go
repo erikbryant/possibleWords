@@ -115,8 +115,6 @@ func permute(green, grey string, yellow []string) {
 }
 
 func main() {
-	fmt.Println("Welcome to permute")
-
 	flag.Parse()
 
 	if *green == "" && *grey == "" && *yellow == "" {
