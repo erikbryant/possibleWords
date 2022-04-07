@@ -1,6 +1,6 @@
 package main
 
-// go fmt && golint && go test && go run possibleWords.go -green= -grey= -yellow=
+// go fmt ./... && go vet ./... && go test && go run possibleWords.go -green= -grey= -yellow=
 
 import (
 	"flag"
